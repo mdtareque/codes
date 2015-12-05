@@ -35,3 +35,16 @@ myreset() {
 k() {
     kill -9 `ps -ef | grep a.out | head -n1 | awk '{print $2}'`
 }
+
+
+# bash aliases
+alias max-ram='sudo dmidecode -t 16'
+
+alias acm-c='gcc -g -O2 -std=gnu99 -static $* -lm'
+alias acm-cpp='g++ -g -O2 -std=gnu++11 -static $*'
+
+# adding -lm doesnt' work here, it needs to be after filename
+alias gcc='gcc -Wall -g'
+alias gits='git status'
+alias h='history | tail '
+alias i='indent -kr -br -brf -brs -cdw -nsaf -nsai -sob -sc -v -c50 -cd50 -nut'
