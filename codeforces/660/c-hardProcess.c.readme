@@ -1,0 +1,3 @@
+Solution
+- A window approach, i fixed, j moves and accumulates k number of zeros and as many adjacent 1s as possible
+- reset global max accordingly
