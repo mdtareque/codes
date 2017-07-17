@@ -94,3 +94,18 @@ autocmd BufWinEnter *.* silent loadview
 "
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
+" set cursorline  " displays horizontal line
+set laststatus=2  " Always show status line
+set nostartofline
+set ruler
+set ignorecase
+" display invisible characters
+set list
+set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+
+
+" reopening a file with cursor set to previous position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
